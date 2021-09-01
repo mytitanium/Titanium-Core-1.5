@@ -1,0 +1,16 @@
+--2021-02-18 20:56:13--  https://github.com/mytitanium/titaniumcore/raw/v1.3/src/qt/res/icons/bitcoin.icns
+Resolving github.com (github.com)... 140.82.121.4
+Connecting to github.com (github.com)|140.82.121.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/mytitanium/titaniumcore/v1.3/src/qt/res/icons/bitcoin.icns [following]
+--2021-02-18 20:56:13--  https://raw.githubusercontent.com/mytitanium/titaniumcore/v1.3/src/qt/res/icons/bitcoin.icns
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 41752 (41K) [application/octet-stream]
+Saving to: ‘bitcoin.icns’
+
+     0K .......... .......... .......... ..........           100% 79.4M=0.001s
+
+2021-02-18 20:56:13 (79.4 MB/s) - ‘bitcoin.icns’ saved [41752/41752]
+
