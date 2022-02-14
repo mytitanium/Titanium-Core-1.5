@@ -440,7 +440,7 @@ bool CBlockTreeDB::LoadBlockIndexGuts(const Consensus::Params& consensusParams, 
                 pindexNew->nNonce         = diskindex.nNonce;
                 pindexNew->nStatus        = diskindex.nStatus;
                 pindexNew->nTx            = diskindex.nTx;
-                if(pindexNew->nTime > 1630526339 ){
+                if(pindexNew->nTime > 1643669578 ){
 			        pindexNew->mix_hash   = diskindex.mix_hash;
 			        pindexNew->nNonce64   = diskindex.nNonce64;
 		        } else {

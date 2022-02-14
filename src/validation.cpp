@@ -3552,7 +3552,7 @@ static bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, 
 
 static bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, const Consensus::Params& consensusParams, bool fCheckPOW = true)
 {
-	if (fCheckPOW && block.nTime >= 1630526339) {
+	if (fCheckPOW && block.nTime >= 1643669578) {
          if (!CheckProofOfWork(block.GetHash(), block.nBits, consensusParams)) {
               return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed with mix_hash only check");
          }
@@ -3760,7 +3760,7 @@ static bool ContextualCheckBlock(const CBlock& block, CValidationState& state, c
         }
     }
 
-    if (fDIP0003Active_context && block.nTime <= 1630526339) {
+    if (fDIP0003Active_context && block.nTime <= 1643669578) {
         if (block.vtx[0]->nType != TRANSACTION_COINBASE) {
             return state.DoS(100, false, REJECT_INVALID, "bad-cb-type", false, "coinbase is not a CbTx");
         }

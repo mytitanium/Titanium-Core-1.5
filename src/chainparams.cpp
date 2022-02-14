@@ -329,29 +329,29 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 87600;
-        consensus.nMasternodePaymentsStartBlock = 500;
-        consensus.nMasternodePaymentsIncreaseBlock = 680;
-        consensus.nMasternodePaymentsIncreasePeriod = 780;
+        consensus.nMasternodePaymentsStartBlock = 50;
+        consensus.nMasternodePaymentsIncreaseBlock = 60;
+        consensus.nMasternodePaymentsIncreasePeriod = 70;
         consensus.nInstantSendConfirmationsRequired = 6;
         consensus.nInstantSendKeepLock = 24;
         consensus.nBudgetPaymentsStartBlock = 708;
         consensus.nBudgetPaymentsCycleBlocks = 916;
         consensus.nBudgetPaymentsWindowBlocks = 100;
-        consensus.nSuperblockStartBlock = 720; 
-        consensus.nSuperblockStartHash = uint256S("0x000005bbbf10c5caa27705f853e1140277a649ebc8b1c7e29fca62df2e9b9fa0");
+        consensus.nSuperblockStartBlock = 80; 
+        consensus.nSuperblockStartHash = uint256S("0x0");
         consensus.nSuperblockCycle = 916;
         consensus.nGovernanceMinQuorum = 10;
         consensus.nGovernanceFilterElements = 200;
         consensus.nMasternodeMinimumConfirmations = 15;
-        consensus.BIP34Height = 201;
-        consensus.BIP34Hash = uint256S("0x000001412bcfac6874e540dcae4291257ac1ba708ae4cbc9e579cc6f18c7acb3"); 
-        consensus.BIP65Height = 242;
-        consensus.BIP66Height = 251;
-        consensus.DIP0001Height = 300;
-        consensus.DIP0003Height = 350;
-        consensus.DIP0003EnforcementHeight = 400;
-        consensus.DIP0003EnforcementHash = uint256S("0x0000022139cf0f77625f09dfaf26009db8946c8619530cd500555af6c4aea0dd");
-        consensus.DIP0008Height = 500; 
+        consensus.BIP34Height = 40;
+        consensus.BIP34Hash = uint256S("0x0"); 
+        consensus.BIP65Height = 45;
+        consensus.BIP66Height = 60;
+        consensus.DIP0001Height = 75;
+        consensus.DIP0003Height = 125;
+        consensus.DIP0003EnforcementHeight = 175;
+        consensus.DIP0003EnforcementHash = uint256S("0x0");
+        consensus.DIP0008Height = 200; 
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 24 * 60 * 60; 
         consensus.nPowTargetSpacing = 2.5 * 60; 
@@ -427,16 +427,16 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xa6;
-        pchMessageStart[1] = 0xc7;
-        pchMessageStart[2] = 0xd8;
+        pchMessageStart[0] = 0xb6;
+        pchMessageStart[1] = 0xd7;
+        pchMessageStart[2] = 0xc8;
         pchMessageStart[3] = 0xa9;
         nDefaultPort = 9999;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1629526375, 122097, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1639333829, 1069033, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ca5eb8c5c4e46771fc6e760bae09716f16f499c93dae14374d0bdbfe1a1"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f16f7a0bad138abc7d8ea4224c4636b74283a958083724a0c77c5774a7c"));
         assert(genesis.hashMerkleRoot == uint256S("0x1f8dd844f8a57b62de20393b429c8847931f7fed95e01afc8e9fe909cf1a1c0d"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
@@ -492,13 +492,13 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {    1, uint256S("0x0000028044198672d9926e9b0c49aafca41adb06278f48b000e2b369817a781c")}
+                {    0, uint256S("0x0000028044198672d9926e9b0c49aafca41adb06278f48b000e2b369817a781c")}
             }
         };
 
         chainTxData = ChainTxData{
             1630213959, // * UNIX timestamp of last known number of transactions (Block 1173619)
-            2,   // * total number of transactions between genesis and that timestamp
+            0,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.2         // * estimated number of transactions per second after that timestamp
         };
