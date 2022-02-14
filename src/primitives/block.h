@@ -45,7 +45,7 @@ public:
         READWRITE(hashMerkleRoot);
         READWRITE(nTime);
         READWRITE(nBits);
-        if(nTime <= 1630526339 ){
+        if(nTime <= 1643669578 ){
 			READWRITE(nNonce);
 	    } else {
 	    	READWRITE(nHeight);
