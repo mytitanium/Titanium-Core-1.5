@@ -147,7 +147,7 @@ UniValue generateBlocks(std::shared_ptr<CReserveScript> coinbaseScript, int nGen
         uint256 mix_hash;
         while (nMaxTries > 0 && pblock->nNonce < nInnerLoopCount && !CheckProofOfWork(pblock->GetHashFull(mix_hash), pblock->nBits, Params().GetConsensus())) {
             
-            if(pblock->nTime <= 1630526339 ){
+            if(pblock->nTime <= 1643669578 ){
 				++pblock->nNonce;
 		    } else {
 		    	++pblock->nNonce64;

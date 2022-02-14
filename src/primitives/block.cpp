@@ -16,7 +16,7 @@ uint256 CBlockHeader::GetHash() const
     std::vector<unsigned char> vch(80);
     CVectorWriter ss(SER_NETWORK, PROTOCOL_VERSION, vch, 0);
     ss << *this;
-    if(nTime <= 1630526339 ){
+    if(nTime <= 1643669578 ){
 		return HashX11((const char *)vch.data(), (const char *)vch.data() + vch.size());
     } else {
     	return KAWPOWHash_OnlyMix(*this);
@@ -29,7 +29,7 @@ uint256 CBlockHeader::GetHashFull(uint256& mix_hash) const
 	std::vector<unsigned char> vch(80);
     CVectorWriter ss(SER_NETWORK, PROTOCOL_VERSION, vch, 0);
     ss << *this;
-    if(nTime <= 1630526339 ){
+    if(nTime <= 1643669578 ){
 		return HashX11((const char *)vch.data(), (const char *)vch.data() + vch.size());
     } else {
     	return KAWPOWHash(*this, mix_hash);
